@@ -1,0 +1,39 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.2.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'com.shortifyurl'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	set('springCloudVersion', "Hoxton.SR1")
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	// implementation 'org.springframework.cloud:spring-cloud-starter-aws-jdbc'
+	// https://mvnrepository.com/artifact/org.springframework.data/spring-data-jdbc
+	compile group: 'org.springframework.data', name: 'spring-data-jdbc', version: '1.1.4.RELEASE'
+	
+	compile("org.springframework.boot:spring-boot-starter-web")
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
