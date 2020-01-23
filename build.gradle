@@ -20,12 +20,16 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	// implementation 'org.springframework.cloud:spring-cloud-starter-aws-jdbc'
 	// https://mvnrepository.com/artifact/org.springframework.data/spring-data-jdbc
-	compile group: 'org.springframework.data', name: 'spring-data-jdbc', version: '1.1.4.RELEASE'
+	compile("org.springframework.data:spring-data-jdbc")
 	
 	compile("org.springframework.boot:spring-boot-starter-web")
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
+	compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.7.0'
 }
 
 dependencyManagement {
