@@ -6,10 +6,10 @@ import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories;
 
 @SpringBootApplication
 @EnableJdbcRepositories
-public class ShortifyUrlServiceApplication {
+public class ShortifyUrlApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ShortifyUrlServiceApplication.class, args);
+		SpringApplication.run(ShortifyUrlApplication.class, args);
 	}
 
 }

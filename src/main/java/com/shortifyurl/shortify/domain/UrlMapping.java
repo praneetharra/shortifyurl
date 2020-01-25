@@ -4,8 +4,11 @@ import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class UrlMapping {
 	@Id
+	@JsonIgnore
 	private int id;
 	private String short_url;
 	private String long_url;
