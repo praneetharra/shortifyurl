@@ -80,8 +80,8 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: first-run-task-definition.json
-        container-name: shortifyurl
+        task-definition: shortifyurl-task-defination.json
+        container-name: shortifyurl-container
         image: ${{ steps.build-image.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
