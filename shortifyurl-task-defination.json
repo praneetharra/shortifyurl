@@ -4,7 +4,6 @@
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
-      "logConfiguration": null,
       "entryPoint": null,
       "portMappings": [
         {
